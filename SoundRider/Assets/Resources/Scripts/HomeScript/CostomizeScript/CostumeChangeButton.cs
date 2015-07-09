@@ -5,6 +5,8 @@ public class CostumeChangeButton : MonoBehaviour {
 
     //コスチュームの番号
 	public int coutumeNumber;
+
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -12,7 +14,7 @@ public class CostumeChangeButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+      
 	}
     
     public void PushButton () {

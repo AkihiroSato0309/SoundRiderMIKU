@@ -23,7 +23,7 @@ public class ObjectMnager : MonoBehaviour {
         Costomize = GameObject.Find("Costomize");
         Shop = GameObject.Find("Shop");
 
-        //タイトルだけを有効化
+        ////タイトルだけを有効化
         Title.SetActive(true);
         StageSelect.SetActive(false);
         Costomize.SetActive(false);
@@ -32,7 +32,7 @@ public class ObjectMnager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+
         //タイトルだけを有効化
         if (sceneMode == 0)
         {
@@ -63,7 +63,7 @@ public class ObjectMnager : MonoBehaviour {
             Title.SetActive(false);
             StageSelect.SetActive(false);
             Shop.SetActive(false);
-            Costomize.SetActive(true);    
+            Costomize.SetActive(true);
         }
 	}
 }
