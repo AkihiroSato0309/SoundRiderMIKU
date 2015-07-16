@@ -16,21 +16,41 @@ public class InputEX : MonoBehaviour
 		None
 	}
 
+	// 使用定数
 	const float BORDE_FLICK = 50.0f;
-	float RADIAN_TOP_RIGHT;
-	float RADIAN_TOP_LEFT;
-	float RADIAN_BOTTOM_RIGHT;
-	float RADIAN_BOTTOM_LEFT;
+	private float RADIAN_TOP_RIGHT;
+	private float RADIAN_TOP_LEFT;
+	private float RADIAN_BOTTOM_RIGHT;
+	private float RADIAN_BOTTOM_LEFT;
 
-	private Vector2 currentTouchPos;
-	private Vector2 lastTouchPos;
-	private Vector2 slideVec;
-	private float slideAngle;
-	private int holdFrame = 0;
-	private eDirection slideDirection;
 
-	private float screen2Resolution;
+	private Vector2 currentTouchPos;		// 現在のタッチ座標
+	private Vector2 lastTouchPos;			// 最後にタッチした座標
+	private Vector2 slideVec;				// スライド方向
+	private float slideAngle;				// スライドした角度
+	private float holdSecond = 0.0f;		// タッチ中のカウント
+	private eDirection slideDirection;		// スライド方向の向き
+	private float screen2Resolution;		// スクリーン座標を解像度座標に変換
+	private bool isTouchFlag = false;		// タッチしている時はtrue
 
+	// プロパティ
+	public bool IsTouchFlag
+	{
+		get{ return isTouchFlag;}
+	}
+
+	public Vector2 SlideVec
+	{
+		get{ return slideVec; }
+	}
+
+	public eDirection SlideDirection
+	{
+		get{ return slideDirection; }
+	}
+
+
+	// 開始処理
 	void Start()
 	{
 		screen2Resolution = 1920.0f / Screen.width;
@@ -45,22 +65,15 @@ public class InputEX : MonoBehaviour
 		slideDirection = eDirection.None;
 	}
 
-
+	// 更新処理
 	void Update()
 	{
 		slideDirection = eDirection.None;
 		if (Input.GetMouseButtonDown (0)) 
 		{
-			holdFrame = 0;
+			holdSecond = 0;
 			StartTouch ();
 		}
-	}
-
-
-
-	public Vector2 GetSlideVec()
-	{		
-		return slideVec;
 	}
 
 	// タッチ開始時に呼ぶ関数
@@ -71,14 +84,19 @@ public class InputEX : MonoBehaviour
 
 		// マウスの位置を保存
 		lastTouchPos = Screen2ResolutionSize(Input.mousePosition);
+
+		// タッチフラグを立てる
+		isTouchFlag = true;
 	}
 
+
+	// タッチしている時に呼ばれる関数
 	IEnumerator Touching()
 	{
 		while (true) 
 		{
 			// ホールドカウント
-			holdFrame++;
+			holdSecond += Time.deltaTime;
 
 			currentTouchPos = Screen2ResolutionSize(Input.mousePosition);
 
@@ -90,9 +108,12 @@ public class InputEX : MonoBehaviour
 
 			yield return null;
 
+
+			// タッチを離す時
 			if (Input.GetMouseButtonUp (0)) 
 			{
 				SetFlickDirection ();
+				isTouchFlag = false;
 				yield break;
 			}
 		}
@@ -136,11 +157,6 @@ public class InputEX : MonoBehaviour
 		}
 	}
 
-	public eDirection GetFlickDirection()
-	{
-		return slideDirection;
-	}
-
 	// 現在のスクリーン座標から画面座標を割り出す
 	Vector2 Screen2ResolutionSize(Vector2 touchPos)
 	{
@@ -151,9 +167,11 @@ public class InputEX : MonoBehaviour
 	// デバッグ表示
 	void OnGUI() 
 	{
-		GUI.Label (new Rect (0, 0, 400, 30), slideAngle.ToString());
-		GUI.Label (new Rect(0, 20, 400, 30), "SlideVec : " + slideVec.ToString());
-		GUI.Label (new Rect(0, 40, 400, 30), "SlideVecLong : " + slideVec.magnitude.ToString());
-		GUI.Label (new Rect(0, 60, 400, 30), "SlideDirection : " + slideDirection.ToString());
+		int showY = 0;
+		GUI.Label (new Rect(0, showY, 400, 30), slideAngle.ToString());
+		GUI.Label (new Rect(0, showY += 15, 400, 30), "SlideVec : " + slideVec.ToString());
+		GUI.Label (new Rect(0, showY += 15, 400, 30), "SlideVecLong : " + slideVec.magnitude.ToString());
+		GUI.Label (new Rect(0, showY += 15, 400, 30), "SlideDirection : " + slideDirection.ToString());
+		GUI.Label (new Rect(0, showY += 15, 400, 30), "TouchCount : " + holdSecond.ToString());
 	}
 }

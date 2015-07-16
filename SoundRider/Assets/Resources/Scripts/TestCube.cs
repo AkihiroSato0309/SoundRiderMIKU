@@ -14,22 +14,22 @@ public class TestCube : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (inputEx.GetFlickDirection () == InputEX.eDirection.Right) 
+		if (inputEx.SlideDirection == InputEX.eDirection.Right) 
 		{
 			transform.Translate (new Vector3(1.0f, 0.0f, 0.0f));
 		}
 
-		if (inputEx.GetFlickDirection () == InputEX.eDirection.Left) 
+		if (inputEx.SlideDirection == InputEX.eDirection.Left) 
 		{
 			transform.Translate (new Vector3(-1.0f, 0.0f, 0.0f));
 		}
 
-		if (inputEx.GetFlickDirection () == InputEX.eDirection.Top) 
+		if (inputEx.SlideDirection == InputEX.eDirection.Top) 
 		{
 			transform.Translate (new Vector3(0.0f, 1.0f, 0.0f));
 		}
 
-		if (inputEx.GetFlickDirection () == InputEX.eDirection.Bottom) 
+		if (inputEx.SlideDirection == InputEX.eDirection.Bottom) 
 		{
 			transform.Translate (new Vector3(0.0f, -1.0f, 0.0f));
 		}

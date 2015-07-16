@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 8fc2bd6c5e41e45389382f99f7dfc43e
+timeCreated: 1436404316
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MikuBorn_0
+    21300002: MikuBorn_1
+    21300004: MikuBorn_2
+    21300006: MikuBorn_3
+    21300008: MikuBorn_4
+    21300010: MikuBorn_5
+    21300012: MikuBorn_6
+    21300014: MikuBorn_7
+    21300016: MikuBorn_8
+    21300018: MikuBorn_9
+    21300020: MikuBorn_10
+    21300022: MikuBorn_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MikuBorn_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 346
+        width: 149
+        height: 142
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 252
+        width: 84
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_2
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 171
+        width: 52
+        height: 165
+      alignment: 9
+      pivot: {x: .499999851, y: .140853047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 171
+        width: 52
+        height: 165
+      alignment: 9
+      pivot: {x: .528489769, y: .131874412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 171
+        width: 52
+        height: 165
+      alignment: 9
+      pivot: {x: .500000298, y: .140853047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_5
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 171
+        width: 52
+        height: 165
+      alignment: 9
+      pivot: {x: .5, y: .131874323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 3
+        width: 52
+        height: 165
+      alignment: 9
+      pivot: {x: .528489947, y: .131874681}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_7
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 4
+        width: 52
+        height: 165
+      alignment: 9
+      pivot: {x: .499999851, y: .131874308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_8
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 4
+        width: 52
+        height: 165
+      alignment: 9
+      pivot: {x: .528490186, y: .131874263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_9
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 4
+        width: 52
+        height: 165
+      alignment: 9
+      pivot: {x: .500000298, y: .131874263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_10
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 15
+        width: 33
+        height: 58
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MikuBorn_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 19
+        width: 33
+        height: 58
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
